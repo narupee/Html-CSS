@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- <html lang="ko"> 의 " " 안에 들어가는건 언어를 뜻함 -->
+<!-- 우선 가장 흔한 이유는 language를 korean으로 선언함으로써 브라우저 내에서 한글 깨짐을 방지
+웹 접근성 측면에서는 시각장애인용 리더기 사용시 정상동작 할 수 있도록  언어를 정확히 정의해주어야 한다.
+또한 lang이라는 속성을 꼭 html태그가 아닌 다른 태그들에게 각각 지정해 줄 수 있음
+이때는 lang속성의 값(ko냐 jp냐 en이냐...등등)에 따라서
+서로 다른 기능이나 css를 적용 할때 분리해서 사용할수가 있다. -->
+<!-- /* */ : 이건 css 주석 방식 -->
+<!-- 이건 그 외 주석 방식 -->
+<!-- h1 : 제목태그, ul li : 목록태그 -->
+<!-- 목록태그는 기본적으로 숨겨진 점이 앞에 생김 -->
+<!-- 입력양식, form 과 input태그 -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>30분만에 Html, css 정복</title>
+</head>
+<body>
+<style>                /* css방식 -> style */
+
+li {
+    list-style: none;   /* 목록태그 앞 점을 없애줌 */
+}
+
+.blockTag{
+    background-color: yellowgreen;   /* 배경색넣기 */
+}                  /* cass 는 앞에 .을 붙여서 부름, 태그는 그냥 부름 [예]div */
+.blockTag > div{   /* blockTag 안에 있는 자식요소인 div들 선택 방법 */
+    blockground:tomato;
+    border:1px solid black;   /* 구분표시 */
+}
+
+.inlineTag span{       /* span :  자기 영역만 차지 */
+    background: skyblue;
+    border:1px solid black;
+}
+
+</style>
+
+<!-- 가로로 쭉 나열이 아닌 순서나열을 하기 위한 방식 -->
+<!-- 목록태그를 함께 사용 -->
+<from>
+    <ul>
+        <li><input type="text"> </li>
+        <li><input type="text"> </li>
+        <li>
+            <!-- input 태그와 조금 다른 checkbox, radio 방식 -->
+            <label><input type="radio" name="fruit" id="orange">오렌지</label>  <!-- 영상9:16까지공부 -->
+        </li>
+    </ul>
+</from>
+
+<from>   <!-- 서버사이드,데이터베이스 등 데이터를 전송 할때 씀 -->
+    <input type="text">   <!-- 내용 적을 텍스트 박스 -->
+    <input type="text">
+    <input type="submit">   <!-- submit : 데이터 전송 역할 -->
+    <!-- input 태그는 여러 tupe 양식을 가지고 있다 -->
+</from>
+
+
+<h1>제목</h1>
+<h2>제목</h2>
+<h6>제목</h6>
+
+<ul>
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+</ul>
+
+<div class="blockTag">     <!-- 제목짓기 '대문자 or '_ 언더바' ,  class : 이름짓기 -->
+    <div>block 1</div>     <!-- '세로'로 나옴 -->
+    <div>block 2</div>
+    <div>block 3</div>
+</div>
+
+<div class="inlineTag">
+    <span>inline 1</span>
+    <span>inline 2</span>
+    <span>inline 3</span>   <!-- '가로'로 나옴 -->
+</div>
+</body>
+</html>
+
